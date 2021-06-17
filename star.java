@@ -25,11 +25,18 @@ public class Star {
         // Get the info of the star
         System.out.println("What's the name of the star?");
         star_name = scannerObj.nextLine();
+	//input temperature
+	System.out.println("What is the temperature of the star");
+	star_temp = scannerObj.nextFloat();
+	// input star type
+	System.out.println("What is the temperature of the star");
+	star_temp = scannerObj.nextLine();
+
 
         // Write to database
         try {    
             FileWriter fileWriter = new FileWriter("./database/"+star_id+".txt");
-            fileWriter.write("ID: " + star_id + "\nName: " + star_name);
+            fileWriter.write("ID: " + star_id + " Name: " + star_name + " Temperature: " + star_temp + " Type: " + star_type + "\n");
             fileWriter.close();
         } catch (IOException e) {
             System.out.println("An error occurred.");
