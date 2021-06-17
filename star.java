@@ -9,6 +9,8 @@ public class Star {
     boolean check_if_id_exists = true;
     int star_id;
     String star_name;
+    Float  star_temp;
+    String star_type;
     Scanner scannerObj = new Scanner(System.in);
 
     public void addStar() {
